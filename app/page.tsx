@@ -66,7 +66,7 @@ export default function Home() {
             <button
               onClick={() => router.push("/youtube-to-mp3/")}
               disabled={isLoading}
-              className={`w-full flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-4 rounded-lg transition-colors ${
+              className={`w-full flex cursor-pointer items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-4 rounded-lg transition-colors ${
                 isLoading ? "opacity-70 cursor-not-allowed" : ""
               }`}
             >
