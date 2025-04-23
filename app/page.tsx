@@ -53,7 +53,7 @@ export default function Home() {
       <section className="bg-gradient-to-b from-red-50 to-white py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="text-4xl md:text-5xl text-red-900 font-bold mb-4">
               YouTube to MP3 Converter
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
