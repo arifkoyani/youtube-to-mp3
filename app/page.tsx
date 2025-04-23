@@ -1,9 +1,19 @@
 "use client";
-import { FaMusic, FaRocket, FaLock, FaQuestion } from "react-icons/fa";
+import {
+  FaMusic,
+  FaRocket,
+  FaLock,
+  FaQuestion,
+  FaDownload,
+} from "react-icons/fa";
 import { MdHighQuality } from "react-icons/md";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function Home() {
+  const [url, setUrl] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
   const router = useRouter();
   return (
     <div className="min-h-screen flex flex-col">
@@ -55,9 +65,22 @@ export default function Home() {
           <div className="max-w-xl mx-auto flex justify-center">
             <button
               onClick={() => router.push("/youtube-to-mp3/")}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              disabled={isLoading}
+              className={`w-full flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-4 rounded-lg transition-colors ${
+                isLoading ? "opacity-70 cursor-not-allowed" : ""
+              }`}
             >
-              Download MP3
+              {isLoading ? (
+                <>
+                  <div className="animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full"></div>
+                  <span>Converting...</span>
+                </>
+              ) : (
+                <>
+                  <FaDownload className="text-lg" />
+                  <span>Download MP3</span>
+                </>
+              )}
             </button>
           </div>
         </div>
