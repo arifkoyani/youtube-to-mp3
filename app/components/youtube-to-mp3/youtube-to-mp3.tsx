@@ -14,7 +14,6 @@ export default function YoutubeDownloader() {
       setError("Please enter a valid YouTube URL");
       return;
     }
-
     setIsLoading(true);
 
     try {
