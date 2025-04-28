@@ -1,0 +1,42 @@
+
+// import { PlaceholdersAndVanishInput } from "../ui/placeholders-and-vanish-input";
+// import { Download } from "lucide-react";
+// import { SteelButton } from "../button/button";
+
+// export default function PlaceholdersAndVanishInputDemo() {
+//   const placeholders = [
+//     "Paste your YouTube link here...",
+//     "Enter the video URL to convert to MP3...",
+//     "Which YouTube song do you want to download?",
+//     "Insert a YouTube video link for MP3 download...",
+//     "Type or paste the YouTube URL to start converting...",
+//   ];
+
+//   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+//     console.log(e.target.value);
+//   };
+//   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+//     e.preventDefault();
+//     console.log("submitted");
+//   };
+//   return (
+//     <div className="h-[40rem] flex flex-col justify-center  items-center px-4">
+//       <h2 className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl dark:text-white text-black">
+//         YouTube to MP3 Converter
+//       </h2>
+//       <PlaceholdersAndVanishInput
+//         placeholders={placeholders}
+//         onChange={handleChange}
+//         onSubmit={onSubmit}
+//       />
+
+//       <div className="flex mt-5 flex-col items-center justify-center gap-6 bg-transparent p-4">
+//         <div className="flex flex-wrap gap-1">
+//           <SteelButton icon={<Download className="h-4 w-23 cursor-pointer" />}>
+//             click Me
+//           </SteelButton>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
